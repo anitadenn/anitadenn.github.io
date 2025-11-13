@@ -23,7 +23,7 @@ body{
 }
 
 
-/* header */
+/* header section*/
 .header{
     scroll-margin-top: 70px;
     position: sticky;
@@ -51,7 +51,13 @@ nav a{
     font-weight: 500;
 }
 
+nav .fa-bars{
+    display: none;
+}
 
+nav .fa-xmark{
+    display: none;
+}
 
 .my-logo{
     color: crimson;
@@ -121,7 +127,7 @@ nav ul{
 
 
 
-/* hero */
+/* hero section*/
 .hero{
     scroll-margin-top: 70px;
     background: #111;
@@ -192,6 +198,7 @@ nav ul{
     margin-left: 20px;
 }
 
+
 .myimage img{ 
     width: 400px;
     height: 400px;
@@ -208,7 +215,7 @@ nav ul{
 
 
 
-/* about */
+/* about section*/
 .about{
     padding: 40px 0;
     background: black;
@@ -217,6 +224,7 @@ nav ul{
     transform: translateY(40px);
     transition: all 1s ease;
     scroll-margin-top: 55px;
+    
 
 }
 .about.active{
@@ -290,13 +298,17 @@ nav ul{
 
 
 
-/* projects */
+/* projects section*/
 .projects{
     scroll-margin-top: 70px;
     background: white;
     color: black;
     padding-bottom: 50px;
+
 }
+
+
+
 .project-text{
     text-align: center;
      margin-bottom: 40px;
@@ -366,7 +378,7 @@ nav ul{
     
 }
 
-/* contact */
+/* contact section*/
 .contact{
     background-color: white;
     color: black;
@@ -428,7 +440,7 @@ textarea{
 }
 
 input:focus, textarea:focus{
-    border-color: crimson;
+    border: 2px solid crimson;
 }
 
 .btn{
@@ -441,6 +453,7 @@ input:focus, textarea:focus{
     font-size: 1rem;
     cursor: pointer;
     transition: all 0.3s ease;
+    position: inherit;
 }
 
 .btn:hover{
@@ -449,7 +462,7 @@ input:focus, textarea:focus{
 }
 
 
-/* footer */
+/* footer section*/
 
 .footer{
     background: #111;
@@ -502,17 +515,25 @@ input:focus, textarea:focus{
     html, body{
         overflow-x: hidden;
     }
-    /* header */
+    /* header section*/
 
 
     .nav-links{
         display: none;
     }
+
+    nav .fa-bars{
+        display: block;
+        color: white;
+        font-size: 22px;
+        margin: 10px;
+    }
+
     .my-logo{
         font-size: 20px;
     }
 
-    /* hero */
+    /* hero section*/
     .myimage img{ 
         width: 150px;
         height: 150px;
@@ -530,6 +551,7 @@ input:focus, textarea:focus{
         min-height: 90vh;
         padding: 20px;
     }
+
     .myimage{
         order: 1;
     }
@@ -549,7 +571,7 @@ input:focus, textarea:focus{
         font-size: small;
     }
 
-    /* about */
+    /* about section*/
     .about h2:first-child{
         font-size: 27px;
     }
@@ -570,7 +592,7 @@ input:focus, textarea:focus{
         font-size: small;
     }
 
-    /* projects */
+    /* projects section*/
     .projects-container{
         display: flex;
         flex-direction: column;
@@ -589,7 +611,7 @@ input:focus, textarea:focus{
         font-size: 10px;
     }
 
-    /* contact */
+    /* contact section*/
     form .contact-form{
         display: flex;
         align-items: center;
@@ -597,7 +619,7 @@ input:focus, textarea:focus{
 
     }
 
-    /* footer */
+    /* footer section*/
     .footer{
         gap: 20px;
     }
