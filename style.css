@@ -438,7 +438,6 @@ input:focus, textarea:focus{
     border: none;
     border: 1px solid crimson;
     border-radius: 8px;
-    width: 95%;
     font-size: 1rem;
     cursor: pointer;
     transition: all 0.3s ease;
@@ -497,7 +496,117 @@ input:focus, textarea:focus{
 }
 
 
+@media(max-width: 768px){
 
+
+    html, body{
+        overflow-x: hidden;
+    }
+    /* header */
+
+
+    .nav-links{
+        display: none;
+    }
+    .my-logo{
+        font-size: 20px;
+    }
+
+    /* hero */
+    .myimage img{ 
+        width: 150px;
+        height: 150px;
+        border: 4px solid turquoise;
+        border-radius: 50%;
+    }
+    .hero{
+        padding-top: 30px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        text-align: justify;
+        gap: 2em;
+        min-height: 90vh;
+        padding: 20px;
+    }
+    .myimage{
+        order: 1;
+    }
+    .myimage img{
+        margin-left: 0;
+    }
+
+    .intro-box{
+        width: 100%;
+        order: 2;
+    }
+    .intro-box h1{
+        font-size: 30px;
+    }
+
+    .intro-box a{
+        font-size: small;
+    }
+
+    /* about */
+    .about h2:first-child{
+        font-size: 27px;
+    }
+    .about-text{
+        padding: 20px;
+    }
+
+    .skill-box{
+        display: grid;
+        grid-template-columns: repeat(2, 80px);
+        grid-template-rows: repeat(5, 80px);
+    }
+    .skill-box p{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        font-size: small;
+    }
+
+    /* projects */
+    .projects-container{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        
+    }
+
+    .project-card{
+        padding: 20px 10px;
+        gap: 7px;
+        width: 320px;
+    }
+
+    .project-tag .tag{
+        font-size: 10px;
+    }
+
+    /* contact */
+    form .contact-form{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+    }
+
+    /* footer */
+    .footer{
+        gap: 20px;
+    }
+    .footer p{
+        width: 300px;
+        padding: 10px;
+    }
+
+}
 
 
 
