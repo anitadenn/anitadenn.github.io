@@ -1,5 +1,31 @@
 
 const about = document.querySelector('#about');
+const navMenu = document.querySelector('#navMenu');
+const menuIcon = document.querySelector('.menu-bar')
+const closeMenu = document.querySelector('#navMenu .fa-xmark');
+const links = document.querySelectorAll('.nav-links a');
+
+
+menuIcon.addEventListener('click', () => {
+    navMenu.classList.add('open-menu');
+})
+
+closeMenu.addEventListener('click', () => {
+    navMenu.classList.remove('open-menu');
+})
+
+links.forEach(link => {
+    link.addEventListener('click', (event) => {
+        navMenu.classList.remove('open-menu');
+    })
+})
+
+
+
+
+
+
+
 const observer = new IntersectionObserver((entries) => {
     entries.forEach(entry => {
         if(entry.isIntersecting){

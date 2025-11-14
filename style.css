@@ -10,10 +10,6 @@ body{
     color: white;
     font-family: Arial, Helvetica, sans-serif;
     background-color: #111;
-    /* background:linear-gradient(135deg, turquoise, crimson); */
-    /* background: radial-gradient(circle, turquoise, white, crimson); */
-   
-    
 }
 
 @keyframes gradientBG {
@@ -28,22 +24,23 @@ body{
     scroll-margin-top: 70px;
     position: sticky;
     top: 0;
-    background-color: #111;
+    background-color: rgba(0, 0, 0, 0.4);
     z-index: 1000;
     box-shadow: 0 3px 5px rgba(0, 0, 0, 0.1);
-    /* background: linear-gradient(-45deg, rgb(42, 85, 81), rgb(160, 56, 173), rgb(185, 105, 119), rgb(9, 94, 85));
-    background-size: 400% 400%;
-    animation: gradientBG 15s ease infinite; */
-
-}
-
-nav{
     display: flex;
-    padding: 1% 3%;
     justify-content: space-between;
     align-items: center;
-    
+    padding: 10px 40px;
+
 }
+
+nav ul{
+    display: flex;
+    flex-basis: 70%;
+    justify-content: space-around;
+    gap: 2em;
+}
+
 
 nav a{
     text-decoration: none;
@@ -51,11 +48,11 @@ nav a{
     font-weight: 500;
 }
 
-nav .fa-bars{
+i.fa-bars{
     display: none;
 }
 
-nav .fa-xmark{
+i.fa-xmark{
     display: none;
 }
 
@@ -84,13 +81,6 @@ nav .fa-xmark{
     background-color: #999;
     color: white;
 }
-
-nav ul{
-    display: flex;
-    flex-basis: 50%;
-    justify-content: space-around;
-}
-
 
 .nav-links li a::after{
     content: "";
@@ -453,7 +443,7 @@ input:focus, textarea:focus{
     font-size: 1rem;
     cursor: pointer;
     transition: all 0.3s ease;
-    position: inherit;
+    width: 95%;
 }
 
 .btn:hover{
@@ -517,17 +507,63 @@ input:focus, textarea:focus{
     }
     /* header section*/
 
-
+    .header{
+        scroll-margin-top: 30px;
+        padding: 10px 20px;
+        position: sticky;
+        top: 0;
+        z-index: 1000;
+    }
     .nav-links{
         display: none;
     }
 
-    nav .fa-bars{
+    .header i.fa-bars, i.fa-xmark{
         display: block;
         color: white;
         font-size: 22px;
         margin: 10px;
     }
+
+    
+    #navMenu{
+        position: fixed;
+        top: 0;
+        right: 0;
+        width: 80%;
+        height: 100vh;
+        max-width: 320px;
+        display: flex;
+        background-color: rgba(230, 119, 100, 0.862);
+        justify-content: center;
+        align-items: center;
+        transform: translateX(100%);
+        transition: 0.4s ease;
+        z-index: 999;
+    }
+
+    #navMenu.open-menu {
+        transform: translateX(0);
+    }
+
+    #navMenu ul{
+        list-style: none;
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+        padding: 0;
+        gap: 3rem;
+    
+    }
+
+    #navMenu .fa-xmark{
+        position: absolute;
+        top: 20px;
+        left: 20px;
+        font-size: 1.8rem;
+    }
+
+    
 
     .my-logo{
         font-size: 20px;
@@ -541,6 +577,7 @@ input:focus, textarea:focus{
         border-radius: 50%;
     }
     .hero{
+        
         padding-top: 30px;
         display: flex;
         flex-direction: column;
@@ -572,6 +609,9 @@ input:focus, textarea:focus{
     }
 
     /* about section*/
+    .about{
+        scroll-margin-top: 30px;
+    }
     .about h2:first-child{
         font-size: 27px;
     }
@@ -593,6 +633,9 @@ input:focus, textarea:focus{
     }
 
     /* projects section*/
+    .projects{
+        scroll-margin-top: 30px;
+    }
     .projects-container{
         display: flex;
         flex-direction: column;
