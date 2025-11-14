@@ -1,12 +1,14 @@
 *{
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
 }
 html{
     scroll-behavior: smooth;
 }
 body{
     box-sizing: border-box;
+    overflow-x: hidden;
     color: white;
     font-family: Arial, Helvetica, sans-serif;
     background-color: #111;
@@ -20,7 +22,7 @@ body{
 
 
 /* header section*/
-.header{
+header{
     scroll-margin-top: 70px;
     position: sticky;
     top: 0;
@@ -31,6 +33,7 @@ body{
     justify-content: space-between;
     align-items: center;
     padding: 10px 40px;
+    overflow-x: hidden;
 
 }
 
@@ -328,13 +331,12 @@ i.fa-xmark{
     flex-direction: column;
     justify-content: center;
     align-items: start;
-    gap: 1rem;
     border: 1px solid black;
     width: 100%;
-    height: 150px;
     max-width: 400px;
+    gap: 1.3rem;
     border-radius: 17px;
-    padding: 50px;
+    padding: 20px;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
 
 }
@@ -344,7 +346,7 @@ i.fa-xmark{
     color: black;
     width: 10px;
     height: 10px;
-    /* padding: 10px; */
+    padding: 10px;
     font-size: 1.5rem;
 }
 
@@ -355,6 +357,7 @@ i.fa-xmark{
 
 .project-tag{
     display: flex;
+    flex-wrap: wrap;
     gap: 1rem;
 }
 
@@ -398,11 +401,13 @@ i.fa-xmark{
 .contact-form{
     display: flex;
     flex-direction: column;
+    justify-content: center;
+    align-items: center;
     gap: 20px;
 }
 
 .form-group{
-    text-align: left;
+    width: 100%;
 }
 
 
@@ -507,12 +512,20 @@ input:focus, textarea:focus{
     }
     /* header section*/
 
-    .header{
-        scroll-margin-top: 30px;
+
+    header{
         padding: 10px 20px;
-        position: sticky;
+        position: fixed;
+        max-width: 100vw;
+        width: 100vw;
         top: 0;
-        z-index: 1000;
+        left: 0;
+        z-index: 2000;
+        background-color: rgba(0, 0, 0, 0.4);
+        justify-content: space-between;
+        align-items: center;
+        text-align: right;
+        
     }
     .nav-links{
         display: none;
@@ -524,6 +537,8 @@ input:focus, textarea:focus{
         font-size: 22px;
         margin: 10px;
     }
+
+    
 
     
     #navMenu{
@@ -570,6 +585,9 @@ input:focus, textarea:focus{
     }
 
     /* hero section*/
+    .hero{
+        height: 100vh;
+    }
     .myimage img{ 
         width: 150px;
         height: 150px;
