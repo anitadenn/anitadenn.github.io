@@ -2,6 +2,7 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
 }
 html{
     scroll-behavior: smooth;
@@ -63,6 +64,9 @@ i.fa-xmark{
     color: crimson;
     text-shadow: -4px 2px turquoise;
     font-size: 2rem;
+}
+.my-logo {
+    text-decoration: none;
 }
 
 .nav-links li{
@@ -142,13 +146,14 @@ i.fa-xmark{
 }
 
 .intro-box{
-    width: 35%;
+    width: 40%;
 }
 
 
 .intro-box h1{
     font-size: 4rem;
-    margin-bottom: 40px;
+    margin-bottom: 30px;
+    line-height: 4rem;
 
 }
 
@@ -158,8 +163,7 @@ i.fa-xmark{
 }
 
 .intro-box p{
-    margin-bottom: 2rem;
-    font-family: Arial, Helvetica, sans-serif;
+    margin-bottom: 1.2rem;
     line-height: 25px;
     max-width: 500px;
 }
@@ -171,7 +175,33 @@ i.fa-xmark{
     
 }
 
-.intro-box a{
+.icons{
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 3rem;
+    margin-bottom: 30px;
+    /* padding-left: 40px; */
+}
+
+
+.icons i{
+    font-size: 30px;
+    color: white;
+}
+
+.icons i:hover{
+    color: turquoise;
+}
+
+.hero-btn{
+    display: flex;
+    gap: 2rem;
+    flex-wrap: wrap;
+}
+
+
+.hero-btn a{
     border: 1px solid turquoise;
     padding: 10px 16px;
     text-decoration: none;
@@ -181,14 +211,9 @@ i.fa-xmark{
     transition: 0.15s;
 }
 
-.intro-box a:hover{
+.hero-btn a:hover{
     background-color: turquoise;
     color: white;
-}
-
-
-.resume-link{
-    margin-left: 20px;
 }
 
 
@@ -242,6 +267,10 @@ i.fa-xmark{
     align-items: center;
 }
 
+.about-text{
+    padding: 20px;
+    width: 70%;
+}
 
 
 .skill-box{
@@ -475,33 +504,22 @@ input:focus, textarea:focus{
     
 }
 
-.copyright{
-    font-size: small;
-}
 
-.footer a{
-    text-decoration: none;
-    display: inline;
-}
-
-
-
-.footer i{
-    font-size: 30px;
-    color: white;
-}
-
-.footer i:hover{
-    color: turquoise;
-}
-
-
-.icons{
+.footer-links{
     display: flex;
     align-items: center;
     justify-content: center;
     gap: 2em;
 }
+
+.footer-links a{
+    color: #fff;
+}
+
+.copyright{
+    font-size: small;
+}
+
 
 
 @media(max-width: 768px){
@@ -613,7 +631,7 @@ input:focus, textarea:focus{
     .myimage img{
         margin-left: 0;
     }
-
+    
     .intro-box{
         width: 100%;
         order: 2;
@@ -634,7 +652,8 @@ input:focus, textarea:focus{
         font-size: 27px;
     }
     .about-text{
-        padding: 20px;
+        padding: 25px;
+        width: 100%;
     }
 
     .skill-box{
