@@ -479,7 +479,7 @@ input:focus, textarea:focus{
     border: 2px solid crimson;
 }
 
-.btn{
+.form-btn{
     background-color: white;
     color: black;
     padding: 12px 15px;
@@ -492,11 +492,14 @@ input:focus, textarea:focus{
     width: 95%;
 }
 
-.btn:hover{
+.form-btn:hover{
     background-color: crimson;
     color: white;
 }
 
+.form-btn:active{
+    background-color: hsl(348, 83%, 57%);
+}
 
 /* footer section*/
 

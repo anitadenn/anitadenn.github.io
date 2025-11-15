@@ -5,9 +5,28 @@ const menuIcon = document.querySelector('.menu-bar')
 const closeMenu = document.querySelector('#navMenu .fa-xmark');
 const links = document.querySelectorAll('.nav-links a');
 
-const form = document.getElementById("contact-form");
-const formMessage = document.querySelector('formMessage');
 
+
+document.addEventListener('DOMContentLoaded', () => {
+    const form = document.getElementById("contactForm");
+    const formMessage = document.getElementById('formMessage');
+
+    form.addEventListener('submit', function(e){
+        e.preventDefault();
+
+        emailjs.sendForm('service_32rvfon','template_8sw16kb', this)
+        .then(() => {
+            formMessage.textContent = "Message sent successfully!";
+            formMessage.style.color = 'green';
+            form.reset();
+        }, (err) => {
+            formMessage.textContent= "Error sending Message. Try again!"
+            formMessage.style.color = "red";
+            console.error(err);
+        });
+    });
+
+});
 
 
 
@@ -58,20 +77,6 @@ navLinks.forEach(link => {
 })
 
 
-form.addEventListener('submit', e =>{
-    e.preventDefault();
-
-emailjs.sendForm('service_32rvfon','template_8sw16kb', this)
-        .then(() => {
-            formMessage.textContent = "Message sent successfully!";
-            formMessage.Style.color = 'green';
-            form.reset();
-        }, (err) => {
-            formMessage.textContent= "Error sending Message. Try again!"
-            formMessage.Style.color = "red";
-            console.error(err);
-        });
-    });
 
 
 
