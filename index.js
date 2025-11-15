@@ -5,6 +5,11 @@ const menuIcon = document.querySelector('.menu-bar')
 const closeMenu = document.querySelector('#navMenu .fa-xmark');
 const links = document.querySelectorAll('.nav-links a');
 
+const form = document.getElementById("contact-form");
+const formMessage = document.querySelector('formMessage');
+
+
+
 
 menuIcon.addEventListener('click', () => {
     navMenu.classList.add('open-menu');
@@ -19,10 +24,6 @@ links.forEach(link => {
         navMenu.classList.remove('open-menu');
     })
 })
-
-
-
-
 
 
 
@@ -57,10 +58,20 @@ navLinks.forEach(link => {
 })
 
 
+form.addEventListener('submit', e =>{
+    e.preventDefault();
 
-
-
-
+emailjs.sendForm('service_32rvfon','template_8sw16kb', this)
+        .then(() => {
+            formMessage.textContent = "Message sent successfully!";
+            formMessage.Style.color = 'green';
+            form.reset();
+        }, (err) => {
+            formMessage.textContent= "Error sending Message. Try again!"
+            formMessage.Style.color = "red";
+            console.error(err);
+        });
+    });
 
 
 
