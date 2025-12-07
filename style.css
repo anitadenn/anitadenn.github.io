@@ -119,14 +119,18 @@ i.fa-xmark{
     width: 100%;
 }
 
-
+.nav-links a.header-resume-link{
+    background-color: crimson;
+}
 
 
 
 /* hero section*/
 .hero{
     scroll-margin-top: 3rem;
-    background: #111;
+    background: black;
+    background-size: cover;
+    background-position: center;
     display: flex;
     justify-content: space-around;
     align-items: center;
@@ -148,7 +152,7 @@ i.fa-xmark{
     display: flex;
     flex-direction: column;
     width: 37%;
-    gap: 2rem;
+    gap: 1rem;
 }
 
 
@@ -229,13 +233,21 @@ i.fa-xmark{
 }
 
 
+.hero-btn a.resume-link{
+    background-color: turquoise;
+    color: black;
+}
+
+.hero-btn a.resume-link:hover{
+    background-color: hsl(174, 72%, 36%);
+}
 
 
 /* about section*/
 .about{
     padding: 40px 0;
-    background: black;
-    color: #fff;
+    background: white;
+    color: #000;
     opacity: 0;
     transform: translateY(40px);
     transition: all 1s ease;
@@ -254,8 +266,9 @@ i.fa-xmark{
     font-size: 2em;
     margin: 2% 0;
 }
-.about h2:first-child{
-    font-size: 4em;
+
+.about .bio{
+    font-size: 3em;
 }
 
 .about-container{
@@ -268,33 +281,48 @@ i.fa-xmark{
 .about-text{
     padding: 0 30px;
     text-align: center;
+    display: flex;
+    gap: 2rem;
 }
 
+.about-card{
+    width: 100%;
+    max-width: 400px;
+    border: 1px solid black;
+    border-radius: 10px;
+    padding: 10px;
+    box-shadow: 10px 10px black;
+}
 
 .skill-box{
     display: grid;
-    grid-template-columns: repeat(3, 150px);
-    grid-template-rows: repeat(3, 100px);
-    gap: 2rem 4em;
-    font-size: 1.5rem;
+    grid-template-columns: repeat(3, 200px);
+    grid-template-rows: repeat(3, 150px);
+    gap: 4rem;
+    width: fit-content;
+    align-content: center;
+    /* font-size: 1.5rem; */
     margin: auto;
 
 
 }
 
-.skill-box p{
-    border: 1px solid turquoise;
-    border-radius: 10px;
+.skill-box div{
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
-    text-align: center;
     transform: all 0.15s;
     font-weight: bold;
+    border-radius: 10px;
     
 }
 
-.skill-box p:hover {
+.skill-box div img{
+    width: 100px;
+}
+
+.skill-box div:hover {
     box-shadow: 0 0 15px turquoise;
     color: turquoise;
 }
@@ -321,9 +349,12 @@ i.fa-xmark{
 /* projects section*/
 .projects{
     scroll-margin-top: 70px;
-    background: white;
-    color: black;
+    background: pink;
+    color: #000;
     padding-bottom: 50px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 
 }
 
@@ -346,10 +377,11 @@ i.fa-xmark{
 .projects-container{
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-    gap: 2em;
+    gap: 4rem;
     justify-items: center;
     align-items: start;
     padding: 1rem;
+    width: fit-content;
 
 }
 
@@ -357,6 +389,8 @@ i.fa-xmark{
     display: flex;
     flex-direction: column;
     justify-content: center;
+    background-color: #fff;
+    color: #000;
     align-items: start;
     border: 1px solid black;
     width: 100%;
@@ -379,7 +413,7 @@ i.fa-xmark{
 
 .project-card:hover{
     transform: translateY(-5px);
-    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
+    box-shadow: 0 10px 25px rgba(5, 130, 189, 0.3);
 }
 
 .project-tag{
@@ -400,7 +434,7 @@ i.fa-xmark{
 
 /* contact section*/
 .contact{
-    background-color: white;
+    background-color: beige;
     color: black;
     padding: 100px 20px;
     display: flex;
@@ -553,7 +587,7 @@ footer p{
         top: 0;
         left: 0;
         z-index: 2000;
-        background-color: rgba(0, 0, 0, 0.4);
+        background-color: rgba(0, 0, 0, 0.8);
         justify-content: space-between;
         align-items: center;
         /* text-align: right; */
@@ -668,6 +702,7 @@ footer p{
     .about-text{
         padding: 25px;
         width: 100%;
+        flex-direction: column;
     }
 
     .skill-box{
