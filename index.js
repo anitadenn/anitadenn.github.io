@@ -58,6 +58,27 @@ observer.observe(about);
 
 
 
+const observer1 = new IntersectionObserver((entries) => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      const items = entry.target.querySelectorAll('.fade-item');
+      
+      items.forEach((item, index) => {
+        setTimeout(() => {
+          item.classList.add('visible');
+        }, index * 200);
+      });
+    }
+  });
+});
+
+document.querySelectorAll('section').forEach(section => {
+  observer1.observe(section);
+});
+
+
+
+
 window.onload = function(){
     if(window.location.hash){
         window.scrollTo(0, 0);
