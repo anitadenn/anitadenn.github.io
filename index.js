@@ -100,7 +100,52 @@ navLinks.forEach(link => {
 
 
 
+const canvas = document.getElementById('hero-stars');
+const ctx = canvas.getContext('2d');
 
+let width = canvas.width = canvas.offsetWidth;
+let height = canvas.height = canvas.offsetHeight;
+
+const numStars = 150;  
+const stars = [];
+
+for (let i = 0; i < numStars; i++) {
+  stars.push({
+    x: Math.random() * width,
+    y: Math.random() * height,
+    size: Math.random() * 1.5 + 0.5,
+    dx: (Math.random() - 0.5) * 0.3,
+    dy: (Math.random() - 0.5) * 0.3
+  });
+}
+
+function animateStars() {
+  ctx.clearRect(0, 0, width, height);
+  stars.forEach(s => {
+    s.x += s.dx;
+    s.y += s.dy;
+
+    // wrap around edges
+    if (s.x < 0) s.x = width;
+    if (s.x > width) s.x = 0;
+    if (s.y < 0) s.y = height;
+    if (s.y > height) s.y = 0;
+
+    ctx.beginPath();
+    ctx.arc(s.x, s.y, s.size, 0, Math.PI * 2);
+    ctx.fillStyle = 'white';
+    ctx.fill();
+  });
+  requestAnimationFrame(animateStars);
+}
+
+animateStars();
+
+
+window.addEventListener('resize', () => {
+  width = canvas.width = canvas.offsetWidth;
+  height = canvas.height = canvas.offsetHeight;
+});
 
 
 
