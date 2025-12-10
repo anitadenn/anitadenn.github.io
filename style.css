@@ -381,11 +381,17 @@ i.fa-xmark{
     width: 100%;
     max-width: 400px;
     flex-grow: 1;
-    border: 1px solid black;
+    border: 1px solid turquoise;
     border-radius: 10px;
     padding: 10px;
-    box-shadow: 10px 10px rgb(255, 74, 104);
+    box-shadow: 10px 10px turquoise;
     margin-bottom: 20px;
+    transition: all 0.3s ease;
+}
+
+.about-card:hover{
+    box-shadow: 10px 10px rgb(255, 74, 104);
+    border: 1px solid rgb(255, 74, 104);
 }
 
 .skill-box{
@@ -402,6 +408,7 @@ i.fa-xmark{
 }
 
 .skill-box div{
+    margin-top: 20px;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -409,6 +416,7 @@ i.fa-xmark{
     transform: all 0.15s;
     font-weight: bold;
     border-radius: 10px;
+    transition: all 0.6s ease;
     
 }
 
@@ -493,7 +501,7 @@ i.fa-xmark{
     gap: 1.3rem;
     border-radius: 17px;
     padding: 20px;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    transition: all .3s ease;
 
 }
 
@@ -507,8 +515,7 @@ i.fa-xmark{
 }
 
 .project-card:hover{
-    transform: translateY(-5px);
-    box-shadow: 0 10px 25px rgba(5, 130, 189, 0.3);
+    box-shadow: 0 10px 25px rgb(4, 87, 126);
 }
 
 .project-tag{
