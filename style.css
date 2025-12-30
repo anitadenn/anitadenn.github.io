@@ -506,6 +506,12 @@ i.fa-xmark{
 
 }
 
+.project-card img{
+    width: 100%;
+    border-radius: 10px;
+    border: 2px solid blue;
+}
+
 .project-card a{
     text-decoration: none;
     color: black;
